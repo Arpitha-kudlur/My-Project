@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz-5</title>
+    
+    <script>
+      function storeInLocalStorage (){
+       const str5 = document.querySelector('input[name="five"]:checked').value;
+       localStorage.setItem("question5",str5)
+      }
+  //     let results = document.getElementById('total_marks').value;
+  // localStorage.setItem("total_marks", marks);
+       
+        var correctQuestion1Answer = "c";
+        var correctQuestion2Answer = "dll";
+        var correctQuestion3Answer = "ups";
+        var correctQuestion4Answer = "laser";
+        var correctQuestion5Answer = "f5";
+
+          function submit (){
+            let marks = 0;
+            const question5 = localStorage.getItem("question5");
+        const question4 = localStorage.getItem("question4"); 
+        const question3 = localStorage.getItem("question3");
+        const question2 = localStorage.getItem("question2");
+        const question1 = localStorage.getItem("question1");
+       
+
+        console.log(question1,question2,question3,question4,question5);
+          if(correctQuestion1Answer===question1){
+            
+            marks += 5;
+          }
+          if(correctQuestion2Answer===question2){
+            marks = marks+ 5;
+          }
+          if(correctQuestion3Answer===question3){
+            marks = marks+ 5;
+          }
+          if(correctQuestion4Answer===question4){
+            marks = marks+ 5;
+          }
+          if(correctQuestion5Answer===question5){
+            marks = marks+ 5;
+          }
+          console.log('Total marks', marks);
+          localStorage.setItem("total_marks", marks);
+          window.location.replace("result.html");
+
+    }
+
+    </script>
+       
+  
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+    <div class="whole_page">
+      <div>
+        <h2>5. Which key on the keyboard can be used to view slide show ?</h2>
+        <ol>
+            <li><input type="radio" value="f1" id="http" name="five"><label for="http">  F1</label></li>
+            <li><input type="radio" value="f2" id="https" name="five"><label for="https">F2</label></li>
+            <li><input type="radio" value="f5" id="html" name="five"><label for="html">F5</label></li>
+            <li><input type="radio" value="f10" id="htp" name="five"><label for="htp">F10</label></li>
+        </ol>
+      <div class="button_next_previous">
+        <div><button type="button" name="next"> <a  href="quiz4.html">Previous</a> </button></div>
+        <div><button class="buttodownn" type="button" name="next" onclick="submit()" value="result.html"> Submit</button></div>
+        
+    </div>
+</body>
+
+</html>

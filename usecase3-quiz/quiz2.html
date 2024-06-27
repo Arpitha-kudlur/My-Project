@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz-2</title>
+    
+    <script>
+     function storeInLocalStorage (){
+        const str2 = document.querySelector('input[name="two"]:checked').value;
+        localStorage.setItem("question2",str2)
+     }
+    </script>
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+    <div class="whole_page">
+        <h1>2. DLL in windows is</h1>
+        <ol>
+            <li><input type="radio" value="dll" name="two"><label for="dll">Dynamic link Library</label></li>
+            <li><input type="radio" value="dig" name="two"><label for="dig">Digital Logical Link</label></li>
+            <li><input type="radio" value="lib" name="two"><label for="lib">Digital Linear Library</label></li>
+            <li><input type="radio" value="dynamic" name="two"><label for="dynamic">Dynamic Linear Link</label></li>
+        </ol>
+        <button type="button" name="next"><a style="color: white;" href="quiz1.html">Previous</a></button>
+        <button type="button" name="next" onclick="storeInLocalStorage()"><a style="color: white;" href="quiz3.html">Next</a></button>
+    </div>
+</body>
+</html>

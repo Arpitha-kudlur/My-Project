@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz-1</title>
+
+    <script>
+      function storeInLocalStorage() {
+        const str = document.querySelector('input[name="one"]:checked').value;
+        localStorage.setItem("question1", str);
+      }
+      let timer;
+      let minutes = 0;
+      let seconds = 0;
+
+      function startTimer() {
+        timer = setInterval(() => {
+          seconds++;
+          if (seconds === 60) {
+            minutes++;
+
+            seconds = 0;
+          }
+          displayTimer();
+        }, 1000);
+      }
+
+      function stopTimer() {
+        clearInterval(timer);
+      }
+
+      function resetTimer() {
+        clearInterval(timer);
+
+        
+
+        minutes = 0;
+
+        seconds = 0;
+
+        displayTimer();
+      }
+
+      function displayTimer() {
+        
+
+        const m = String(minutes).padStart(2, "0");
+
+        const s = String(seconds).padStart(2, "0");
+
+        document.getElementById("timer").innerHTML = `${h}:${m}:${s}`;
+      }
+    </script>
+    <link rel="stylesheet" href="styling.css" />
+  </head>
+  <body>
+    <form>
+      <caption>
+        Simple Quiz
+      </caption>
+      <div class="whole_page">
+        <div class="question">
+          <h2>1. What is the fullform of HTML ?</h2>
+        </div>
+        <div class="options">
+          <div class="examples">
+            <div class="example1">
+              <input type="radio" value="a" name="one" /><label for="http"
+                >Hypertext transfer protocal</label
+              >
+            </div>
+            <div class="example1">
+              <input type="radio" value="b" name="one" /><label for="https"
+                >Hypertext transfer protocal</label
+              >
+            </div>
+          </div>
+          <div class="examples">
+            <div class="example1">
+              <input type="radio" value="c" name="one" /><label for="html"
+                >Hypertext Markup Language</label
+              >
+            </div>
+            <div class="example1">
+              <input type="radio" value="d" name="one" /><label for="htp"
+                >Hyper text protocal</label
+              >
+            </div>
+          </div>
+        </div>
+        <div class="quiz1">
+          <button type="button" name="next" onclick="storeInLocalStorage()">
+            <a class="button_next" href="quiz2.html"> Next</a>
+          </button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

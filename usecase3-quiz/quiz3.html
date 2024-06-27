@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz-3</title>
+    
+    <script>
+        function storeInLocalStorage (){
+        const str3 = document.querySelector('input[name="three"]:checked').value;
+        localStorage.setItem("question3",str3)
+     }
+    </script>
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+<form>
+    <div class="whole_page">
+        
+        <h1>3. Fullform of UPS is</h1>
+        <ol>
+            <li><input type="radio" value="ups" name="three"><label for="ups">uninterrupted power supply</label></li>
+            <li><input type="radio" value="up" name="three"><label for="up">uninterrupted power</label></li>
+            <li><input type="radio" value="upr" name="three"><label for="upr">uniform power source</label></li>
+            <li><input type="radio" value="urs" name="three"><label for="urs">uniform power source</label></li>
+        </ol>
+        <button type="button" name="next"><a style="color: white;" href="quiz2.html">Previous</a></button>
+        <button type="button" name="next" onclick="storeInLocalStorage()"><a style="color: white;" href="quiz4.html">Next</a></button>
+    </div>
+    
+</form>
+</body>
+</html>

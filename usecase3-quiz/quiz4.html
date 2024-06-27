@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz-4</title>
+    
+    <script>
+       function storeInLocalStorage (){
+        const str4 = document.querySelector('input[name="four"]:checked').value;
+        localStorage.setItem("question4",str4)
+     }
+    </script>
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+    <div class="whole_page">
+        
+        <h1>4. Which of the following is not a feature of PowerPoint ?</h1>
+        <ol>
+            <li><input type="radio" value="trans" name="four"><label for="http">Printing transparencies </label></li>
+            <li><input type="radio" value="Printing" name="four"><label for="https">Printing the speaker's notes along with slide images</label></li>
+            <li><input type="radio" value="laser" name="four"><label for="html">Linking a slide transition with a laser pointer</label></li>
+            <li><input type="radio" value="pen" name="four"><label for="htp">Drawing with a pen</label></li>
+        </ol>
+        <button type="button" name="next"><a style="color: white;" href="quiz3.html">Previous</a></button>
+        <button type="button" name="next" onclick="storeInLocalStorage()"><a style="color: white;" href="quiz5.html">Next</a></button>
+    </div>
+
+</body>
+</html>
